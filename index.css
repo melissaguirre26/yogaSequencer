@@ -1,0 +1,74 @@
+
+
+* {
+  font-family: 'Gaegu', sans-serif;
+  background-color: #76D0CF;
+  color: #6A1D57;
+  box-sizing: border-box;
+  display: block;
+  margin: auto
+}
+  
+}
+
+h1{
+  font-size: 50px;
+}
+
+h2{
+  font-size: 35px;
+}
+
+p{
+  font-size: 30px;
+}
+option{
+  font-size: 25px;
+}
+ul{
+list-style: none;
+}
+
+img{
+height: 150px;
+width: 150px;
+border-radius: 50%;
+
+}
+
+button{
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 460px) {
+  h1 {font-size:1.3em;margin: 0.67em 0;}
+  body {font-size: .9em;}
+  form img {max-height:190px;}
+  label {margin:5px 0;}
+  form {padding-top:10px;}
+}
+
+/* Non-mobile, grid */
+@media only screen and (min-width: 320px) {
+  /* 3 columns, 3/12 in % */
+
+  
+  .col-3 {
+    width: 25%;
+  }
+
+  /* 4 columns */
+  .col-4 {
+    width: 33.33%;
+  }
+
+  /* 6 columns */
+  .col-6 {
+    width: 50%;
+  }
+
+  /* 12 columns */
+  .col-12 {
+    width: 100%;
+  }
+}
