@@ -99,6 +99,7 @@ function showSlides() {
 	} else {
 		imgLI[img_Index - 1].style.display = "block";
 		setTimeout(showSlides, 30000)
+		
 	}
 }//end of function showSlides
 
@@ -112,7 +113,7 @@ function handleStartClicked() {
 function renderChooseCategories() {
 
 	let template = `<h2>What are you in the mood for?</h2>
-      <p>Select up to 3 yoga types below and hit the OM bottom</p>
+      <p>Select the yoga types you would like to practice and hit the OM bottom below</p>
    <div id="yoga-info">
     <select id="yogatypes" multiple size=12>
   <option label="Core Yoga Poses">Core Yoga Poses</option>
@@ -150,14 +151,18 @@ function renderChooseCategories() {
 }//end of renderChooseCategories
 
 function renderImgSS() {
-	let template = `<p>Follow the sequence below and hold each pose for at least 30 seconds</p>
+	let template = `<p>Each pose will display for 30 seconds, if you want to keep going the sequence will restart automatically until you hit the OM button again</p>
 <ul id="yogaUl">
 </ul>
-<button id="btnSequence"></button>`
+<div><p>Hit the OM buttom to start</p><button id="btnSequence"></button></div>
+<div id="noLike"><p>Not feeling it? Go back to try again</p><button id="btnRestart">Try again</button></div>`
 	$('.container').html(template);
 	//add event listener to button start sequence
 	let btnSequence = document.getElementById("btnSequence");
 	btnSequence.addEventListener("click", showSlides);
+
+	let btnRestart = document.getElementById("btnRestart");
+	btnRestart.addEventListener("click", renderChooseCategories);
 
 }
 

@@ -73,7 +73,7 @@ button {
     box-shadow: inset 0 -1px 3px #ccc, inset 0 3px 3px #fff;
     transition: all 200ms ease;
     border-radius: 10px;
-    margin:auto;
+    margin:auto; /*this is centering the button in the middle of div*/
     width: 100px;
     height: 100px;
     background-image: url("https://cf.ltkcdn.net/yoga/images/slide/122006-631x850-om-symbol-5.jpg");
@@ -96,8 +96,16 @@ header {
     background-position: 0px 0px; 
     background-size: cover;
     border-radius: 10px; 
+    text-align: center;
 }
+/* #btnSequence {
+  float: left;
 
+  }
+  #bthRestart{
+  float: left;
+  
+  } */
 #image {
   fill:#6A1D57;
 }
