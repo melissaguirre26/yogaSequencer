@@ -2,73 +2,137 @@
 
 * {
   font-family: 'Gaegu', sans-serif;
-  background-color: #76D0CF;
+  /* background-color: #76D0CF; */
   color: #6A1D57;
-  box-sizing: border-box;
-  display: block;
-  margin: auto
+  /* box-sizing: border-box;
+  margin: 0 auto;
+  width: 1000px;  */
 }
-  
+.box {
+    background-color: rgb(132, 216, 194);
+    border: 10px solid rgb(55, 186, 152);
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 700px;
+    border-radius: 10px;
+}
+
+.box::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.nameFont{
+  font-size: 40px;
+
 }
 
 h1{
-  font-size: 50px;
+  font-size: 80px;
+  text-align: center;
+ 
 }
 
 h2{
   font-size: 35px;
+  text-align: center;
+  
 }
 
 p{
   font-size: 30px;
+  
 }
 option{
   font-size: 25px;
+  background-color:rgb(132, 216, 194);
 }
+
+
 ul{
 list-style: none;
+
 }
 
 img{
 height: 150px;
 width: 150px;
-border-radius: 50%;
+border: 1px solid teal;
+
 
 }
 
-button{
-  border-radius: 50%;
+button {
+    display: block;
+    color: #555;
+    padding: 10px 30px;
+    font-size: 16px;
+    background-color: #eee;/*#D05D6D*/
+    border: none;
+    box-shadow: inset 0 -1px 3px #ccc, inset 0 3px 3px #fff;
+    transition: all 200ms ease;
+    border-radius: 10px;
+    margin:auto;
+    width: 100px;
+    height: 100px;
+    background-image: url("https://cf.ltkcdn.net/yoga/images/slide/122006-631x850-om-symbol-5.jpg");
+    background-repeat: no-repeat;  
+    background-position: 0px 0px; 
+    background-size: 100px 100px;
+    border-radius: 10px;
 }
 
-@media only screen and (max-width: 460px) {
-  h1 {font-size:1.3em;margin: 0.67em 0;}
-  body {font-size: .9em;}
-  form img {max-height:190px;}
-  label {margin:5px 0;}
-  form {padding-top:10px;}
+button:hover {
+    background-color: #fff;
 }
 
-/* Non-mobile, grid */
-@media only screen and (min-width: 320px) {
-  /* 3 columns, 3/12 in % */
+button:active {
+    background-color: #ddd;
+}
 
-  
-  .col-3 {
-    width: 25%;
-  }
+header {
+  background-image: url("https://i.pinimg.com/originals/a0/40/af/a040afa413868332e39051188c385c97.jpg");
+    background-position: 0px 0px; 
+    background-size: cover;
+    border-radius: 10px; 
+}
 
-  /* 4 columns */
-  .col-4 {
-    width: 33.33%;
-  }
+#image {
+  fill:#6A1D57;
+}
+.container {
+  text-align: center;
+}
 
-  /* 6 columns */
-  .col-6 {
-    width: 50%;
-  }
+#yogatypes {
+   display: block;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
 
-  /* 12 columns */
-  .col-12 {
-    width: 100%;
-  }
+
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+    body {
+        background-color: rgb(86, 212, 202);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+    body {
+        background-color: rgb(121, 228, 153);
+    }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+     body {
+        background-color: rgb(164, 241, 241);
+    }
 }
