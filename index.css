@@ -92,11 +92,12 @@ button:active {
 }
 
 header {
-  background-image: url("https://i.pinimg.com/originals/a0/40/af/a040afa413868332e39051188c385c97.jpg");
+  /* background-image: url("https://i.pinimg.com/originals/a0/40/af/a040afa413868332e39051188c385c97.jpg");
     background-position: 0px 0px; 
     background-size: cover;
     border-radius: 10px; 
-    text-align: center;
+    text-align: center; */
+    background-color:rgb(132, 216, 194);
 }
 /* #btnSequence {
   float: left;
