@@ -2,11 +2,16 @@
 
 * {
   font-family: 'Gaegu', sans-serif;
-  /* background-color: #76D0CF; */
+  box-sizing: border-box;
   color: #6A1D57;
-  /* box-sizing: border-box;
-  margin: 0 auto;
-  width: 1000px;  */
+}
+
+html{
+  height: 100%;
+
+}
+main{
+  height: 100%;
 }
 .box {
     background-color: rgb(132, 216, 194);
@@ -41,7 +46,7 @@ h2{
 }
 
 p{
-  font-size: 30px;
+  font-size: 50px;
   
 }
 option{
@@ -56,8 +61,8 @@ list-style: none;
 }
 
 img{
-height: 150px;
-width: 150px;
+height: 300px;
+width: 300px;
 border: 1px solid teal;
 
 
@@ -92,56 +97,99 @@ button:active {
 }
 
 header {
-  /* background-image: url("https://i.pinimg.com/originals/a0/40/af/a040afa413868332e39051188c385c97.jpg");
-    background-position: 0px 0px; 
-    background-size: cover;
-    border-radius: 10px; 
-    text-align: center; */
     background-color:rgb(132, 216, 194);
 }
-/* #btnSequence {
-  float: left;
 
-  }
-  #bthRestart{
-  float: left;
-  
-  } */
-#image {
-  fill:#6A1D57;
-}
 .container {
   text-align: center;
+  height: 100%;
+}
+
+body{
+
 }
 
 #yogatypes {
    display: block;
   margin: 0 auto;
 }
+
+@media only screen and (max-width: 321.9px) and (orientation: portrait){
+  body {
+    background-color: rgb(86, 212, 202);
+  }
+
+h1{
+  font-size: 40px;
+  text-align: center;
+ 
+}
+
+h2{
+  font-size: 20px;
+  text-align: center;
+  
+}
+
+p{
+  font-size: 15px;
+  
+}
+option {
+  font-size: 9px;
+  background-color:rgb(132, 216, 194);
+}
+
+}
+
 @media only screen and (max-width: 600px) {
     body {
-        background-color: lightblue;
+      background-color: rgb(121, 228, 153);
     }
+
+h1{
+  font-size: 50px;
+  text-align: center;
+ 
+}
+
+h2{
+  font-size: 30px;
+  text-align: center;
+  
+}
+
+p{
+  font-size: 20px;
+  
+}
+option{
+  font-size: 25px;
+  background-color:rgb(132, 216, 194);
+}
 }
 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 601px) {
     /* tablets and desktop */
     body {
         background-color: rgb(86, 212, 202);
     }
-}
-
-@media only screen and (max-width: 767px) {
-    /* phones */
-    body {
-        background-color: rgb(121, 228, 153);
+    h1{
+      font-size: 80px;
+      text-align: center;
+     
+    }
+    
+    h2{
+      font-size: 50px;
+      text-align: center;
+      
+    }
+    
+    p{
+      font-size: 30px;
+      
     }
 }
 
-@media only screen and (max-width: 767px) and (orientation: portrait) {
-    /* portrait phones */
-     body {
-        background-color: rgb(164, 241, 241);
-    }
-}

@@ -55,7 +55,7 @@ function reqListener() {
 	tracker.forEach(pose => {
 		let name = `${pose.sanskrit_name} - ${pose.english_name}`;
 		let imgUrl = pose.img_url;
-		let template = `<li><div><div class="nameFont">${name}</div><img id="image" class="box" src="${imgUrl}" alt="${name}" /></div></div></li>`;
+		let template = `<li><div><div class="nameFont">${name}</div><img class="box" src="${imgUrl}" alt="${name}" /></div></div></li>`;
 
 		ul.insertAdjacentHTML('beforeend', template)
 	});
@@ -151,7 +151,7 @@ function renderChooseCategories() {
 }//end of renderChooseCategories
 
 function renderImgSS() {
-	let template = `<p>Each pose will display for 30 seconds, if you want to keep going the sequence will restart automatically until you hit the OM button again</p>
+	let template = `<p>Each pose will display for 30 seconds</p>
 <ul id="yogaUl">
 </ul>
 <div><p>Hit the OM buttom to start</p><button id="btnSequence"></button></div>
