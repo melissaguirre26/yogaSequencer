@@ -171,14 +171,15 @@ option{
 button {
     width: 100px;
     height: 100px;
+    background-size: 100px 100px;
   }
   img{
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
     
   }
   .nameFont{
-    font-size: 20px;
+    font-size: 40px;
   
   }
 }
