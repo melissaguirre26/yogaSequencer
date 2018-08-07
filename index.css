@@ -2,11 +2,16 @@
 
 * {
   font-family: 'Gaegu', sans-serif;
-  /* background-color: #76D0CF; */
+  box-sizing: border-box;
   color: #6A1D57;
-  /* box-sizing: border-box;
-  margin: 0 auto;
-  width: 1000px;  */
+}
+
+html{
+  height: 100%;
+
+}
+main{
+  height: 100%;
 }
 .box {
     background-color: rgb(132, 216, 194);
@@ -24,63 +29,67 @@
 }
 
 .nameFont{
-  font-size: 40px;
+  font-size: 20px;
 
 }
 
-h1{
-  font-size: 80px;
-  text-align: center;
+#nav {
+  list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     background-color: rgb(132, 216, 194);
  
-}
+ }
+ 
+ #nav li {
+ 
+   float: left;
+ }
+ 
+ li a {
+     display: block;
+     color: white;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+ }
 
-h2{
-  font-size: 35px;
-  text-align: center;
-  
-}
-
-p{
-  font-size: 30px;
-  
-}
-option{
-  font-size: 25px;
-  background-color:rgb(132, 216, 194);
-}
-
-
-ul{
-list-style: none;
-
+ul {
+  list-style: none;
 }
 
 img{
-height: 150px;
-width: 150px;
-border: 1px solid teal;
-
+height: 100px;
+width: 100px;
+border: 10px solid rgb(55, 186, 152);
+border-radius: 10px;
 
 }
 
 button {
     display: block;
     color: #555;
-    padding: 10px 30px;
+    padding: 10px;
     font-size: 16px;
     background-color: #eee;/*#D05D6D*/
     border: none;
     box-shadow: inset 0 -1px 3px #ccc, inset 0 3px 3px #fff;
     transition: all 200ms ease;
-    border-radius: 10px;
     margin:auto; /*this is centering the button in the middle of div*/
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     background-image: url("https://cf.ltkcdn.net/yoga/images/slide/122006-631x850-om-symbol-5.jpg");
     background-repeat: no-repeat;  
     background-position: 0px 0px; 
-    background-size: 100px 100px;
-    border-radius: 10px;
+    background-size: 50px 50px;
+    border-radius: 50%;
+}
+.hideText {
+  text-indent: -9999px;
+  text-align: left;
+  white-space: nowrap; 
+  overflow: hidden; 
 }
 
 button:hover {
@@ -92,55 +101,88 @@ button:active {
 }
 
 header {
-  background-image: url("https://i.pinimg.com/originals/a0/40/af/a040afa413868332e39051188c385c97.jpg");
-    background-position: 0px 0px; 
-    background-size: cover;
-    border-radius: 10px; 
-    text-align: center;
+    background-color:rgb(132, 216, 194);
 }
-/* #btnSequence {
-  float: left;
 
-  }
-  #bthRestart{
-  float: left;
-  
-  } */
-#image {
-  fill:#6A1D57;
-}
 .container {
   text-align: center;
+  height: 100%;
 }
+
 
 #yogatypes {
    display: block;
   margin: 0 auto;
 }
-@media only screen and (max-width: 600px) {
+
+
+  body {
+    background-color: rgb(86, 212, 202);
+  }
+
+h1{
+  font-size: 40px;
+  text-align: center;
+ 
+}
+
+h2{
+  font-size: 20px;
+  text-align: center;
+  
+}
+
+p{
+  font-size: 20px;
+  
+}
+option {
+  font-size: 14px;
+  background-color:rgb(132, 216, 194);
+}
+
+
+ 
+
+@media only screen and (min-width: 600px) {
     body {
-        background-color: lightblue;
+      background-color: rgb(121, 228, 153);
     }
+    h1{
+      font-size: 80px;
+      text-align: center;
+     
+    }
+    
+    h2{
+      font-size: 35px;
+      text-align: center;
+      
+    }
+    
+    p{
+      font-size: 50px;
+      
+    }
+option{
+  font-size: 25px;
+  background-color:rgb(132, 216, 194);
+}
+button {
+    width: 100px;
+    height: 100px;
+    background-size: 100px 100px;
+  }
+  img{
+    height: 200px;
+    width: 200px;
+    
+  }
+  .nameFont{
+    font-size: 40px;
+  
+  }
 }
 
 
-@media only screen and (min-width: 768px) {
-    /* tablets and desktop */
-    body {
-        background-color: rgb(86, 212, 202);
-    }
-}
 
-@media only screen and (max-width: 767px) {
-    /* phones */
-    body {
-        background-color: rgb(121, 228, 153);
-    }
-}
-
-@media only screen and (max-width: 767px) and (orientation: portrait) {
-    /* portrait phones */
-     body {
-        background-color: rgb(164, 241, 241);
-    }
-}
