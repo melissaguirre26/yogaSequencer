@@ -55,7 +55,7 @@ function reqListener() {
 	tracker.forEach(pose => {
 		let name = `${pose.sanskrit_name} - ${pose.english_name}`;
 		let imgUrl = pose.img_url;
-		let template = `<li><div><div class="nameFont">${name}</div><img class="box" src="${imgUrl}" alt="${name}" /></div></div></li>`;
+		let template = `<li><div><div class="nameFont">${name}</div><img src="${imgUrl}" alt="${name}" /></div></div></li>`;
 
 		ul.insertAdjacentHTML('beforeend', template)
 	});
@@ -129,7 +129,7 @@ function renderChooseCategories() {
      <option label="Balancing Yoga Poses">Balancing Yoga Poses</option>
     <option label="Inversion Yoga Poses">Inversion Yoga Poses</option>
 </select>
-<button id="btnOM"></button>
+<button id="btnOM" class="hideText">OM</button>
 
  </div>
 
@@ -154,8 +154,8 @@ function renderImgSS() {
 	let template = `<p>Each pose will display for 30 seconds</p>
 <ul id="yogaUl">
 </ul>
-<div><p>Hit the OM buttom to start</p><button id="btnSequence"></button></div>
-<div id="noLike"><p>Not feeling it? Go back to try again</p><button id="btnRestart">Try again</button></div>`
+<div><p>Hit the OM buttom to start</p><button id="btnSequence" class="hideText">Start Sequence</button></div>
+<div id="noLike"><p>Not feeling it? Go back to try again</p><button id="btnRestart" class="hideText">Try again</button></div>`
 	$('.container').html(template);
 	//add event listener to button start sequence
 	let btnSequence = document.getElementById("btnSequence");
@@ -169,7 +169,7 @@ function renderImgSS() {
 function renderLast() {
 	let template = `<p>Congrats! You finished your yoga sequence!</p>
 
-	<button id="newSS"></button>`
+	<button id="newSS" class="hideText">Slide Show</button>`
 	$('.container').html(template);
 	//add event listener to button start sequence
 	let newSS = document.getElementById("newSS");
