@@ -13,7 +13,5 @@ If user decides they didn't like the sequence - they will be brought to the scre
 
 Once the sequence is over the final screen will display congratulating the user on completing the user.  The user will be able to go back to choosing a new sequence if they want to try it again
 
-work on repl and paste over visual studio files then do git
-git add .
-git commit -m "write message"
-git push
+
+https://melissaguirre26.github.io/yogaSequencer/
