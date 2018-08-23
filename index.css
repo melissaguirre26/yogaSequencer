@@ -1,188 +1,352 @@
-
-
 * {
-  font-family: 'Gaegu', sans-serif;
-  box-sizing: border-box;
-  color: #6A1D57;
+	font-family: 'Gaegu', sans-serif;
+	box-sizing: border-box;
+	color: #6A1D57;
 }
 
-html{
-  height: 100%;
+html {
+	height: 100%;
+}
 
+main {
+	height: 100%;
 }
-main{
-  height: 100%;
-}
+
 .box {
-    background-color: rgb(132, 216, 194);
-    border: 10px solid rgb(55, 186, 152);
-    padding: 30px;
-    margin: 30px auto;
-    max-width: 700px;
-    border-radius: 10px;
+	background-color: rgb(132, 216, 194);
+	border: 10px solid rgb(55, 186, 152);
+	padding: 30px;
+	margin: 30px auto;
+	max-width: 700px;
+	border-radius: 10px;
 }
 
 .box::after {
-    content: '';
-    display: table;
-    clear: both;
+	content: '';
+	display: table;
+	clear: both;
 }
 
-.nameFont{
-  font-size: 20px;
-
+.nameFont {
+	font-size: 20px;
 }
 
 #nav {
-  list-style-type: none;
-     margin: 0;
-     padding: 0;
-     overflow: hidden;
-     background-color: rgb(132, 216, 194);
- 
- }
- 
- #nav li {
- 
-   float: left;
- }
- 
- li a {
-     display: block;
-     color: white;
-     text-align: center;
-     padding: 14px 16px;
-     text-decoration: none;
- }
-
-ul {
-  list-style: none;
+	list-style-type: none;
+	margin-top: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: rgb(132, 216, 194);
 }
 
-img{
-height: 100px;
-width: 100px;
-border: 10px solid rgb(55, 186, 152);
-border-radius: 10px;
+#nav li {
+	float: left;
+}
 
+li a {
+	display: block;
+	color: #6A1D57;
+	text-align: center;
+	padding: 20px 26px;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	height: 100px;
+	width: 100px;
+	border: 5px solid rgb(55, 186, 152);
+	border-radius: 10px;
+}
+
+img.nav-img {
+	height: 70px;
+	width: 70px;
+	border-radius: 50%;
+	border: 5px solid rgb(55, 186, 152);
+	float: right;
 }
 
 button {
-    display: block;
-    color: #555;
-    padding: 10px;
-    font-size: 16px;
-    background-color: #eee;/*#D05D6D*/
-    border: none;
-    box-shadow: inset 0 -1px 3px #ccc, inset 0 3px 3px #fff;
-    transition: all 200ms ease;
-    margin:auto; /*this is centering the button in the middle of div*/
-    width: 50px;
-    height: 50px;
-    background-image: url("https://cf.ltkcdn.net/yoga/images/slide/122006-631x850-om-symbol-5.jpg");
-    background-repeat: no-repeat;  
-    background-position: 0px 0px; 
-    background-size: 50px 50px;
-    border-radius: 50%;
-}
-.hideText {
-  text-indent: -9999px;
-  text-align: left;
-  white-space: nowrap; 
-  overflow: hidden; 
+	display: block;
+	color: #6A1D57;
+	padding: 10px;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: rgb(161, 245, 222);
+	border: 2px solid rgb(55, 186, 152);
+	margin: auto;
+	/*this is centering the button in the middle of div*/
+	width: 70px;
+	height: 70px;
+	background-position: 0px 0px;
+	background-size: 50px 50px;
+	border-radius: 50%;
 }
 
 button:hover {
-    background-color: #fff;
-}
-
-button:active {
-    background-color: #ddd;
+	background-color: rgb(251, 219, 255);
 }
 
 header {
-    background-color:rgb(132, 216, 194);
+	background-color: rgb(132, 216, 194);
 }
 
 .container {
-  text-align: center;
-  height: 100%;
+	text-align: center;
+	height: 100%;
 }
-
 
 #yogatypes {
-   display: block;
-  margin: 0 auto;
+	display: block;
+	margin: 0 auto;
 }
 
-
-  body {
-    background-color: rgb(86, 212, 202);
-  }
-
-h1{
-  font-size: 40px;
-  text-align: center;
- 
+fieldset {
+	border: none;
 }
 
-h2{
-  font-size: 20px;
-  text-align: center;
-  
+body {
+	background-color: rgb(132, 216, 194);
 }
 
-p{
-  font-size: 20px;
-  
+h1 {
+	font-size: 40px;
+	text-align: center;
 }
+
+h2 {
+	font-size: 20px;
+	text-align: center;
+}
+
+p {
+	font-size: 16px;
+}
+
 option {
-  font-size: 14px;
-  background-color:rgb(132, 216, 194);
+	font-size: 16px;
+	background-color: rgb(132, 216, 194);
+	width: 220px;
 }
 
+#poseTimer {
+	font-size: 16px;
+	background-color: rgb(132, 216, 194);
+	width: 220px;
+}
 
- 
+#customizeTimer {
+	font-size: 16px;
+	background-color: rgb(132, 216, 194);
+	width: 220px;
+}
+
+label {
+	font-size: 25px;
+	display: block;
+}
 
 @media only screen and (min-width: 600px) {
-    body {
-      background-color: rgb(121, 228, 153);
-    }
-    h1{
-      font-size: 80px;
-      text-align: center;
-     
-    }
-    
-    h2{
-      font-size: 35px;
-      text-align: center;
-      
-    }
-    
-    p{
-      font-size: 50px;
-      
-    }
-option{
-  font-size: 25px;
-  background-color:rgb(132, 216, 194);
+	body {
+		background-color: rgb(132, 216, 194);
+	}
+	h1 {
+		font-size: 80px;
+		text-align: center;
+	}
+	h2 {
+		font-size: 40px;
+		text-align: center;
+	}
+	p {
+		font-size: 25px;
+	}
+	option {
+		font-size: 25px;
+		background-color: rgb(132, 216, 194);
+		width: 300px;
+	}
+	#poseTimer {
+		font-size: 25px;
+		background-color: rgb(132, 216, 194);
+		width: 300px;
+	}
+	#customizeTimer {
+		width: 300px;
+	}
+	label {
+		font-size: 40px;
+		display: block;
+		position: relative;
+		top: 0px;
+		left: 0px;
+	}
+	button {
+		width: 100px;
+		height: 100px;
+		background-size: 100px 100px;
+	}
+	img {
+		height: 300px;
+		width: 300px;
+	}
+	img.nav-img {
+		height: 100px;
+		width: 100px;
+		border-radius: 50%;
+		border: 5px solid rgb(55, 186, 152);
+		float: right;
+	}
+	.nameFont {
+		font-size: 40px;
+	}
+	#nav li {
+		font-size: 25px;
+	}
+	li a {
+		font-size: 25px;
+	}
+	/* loader styling */
 }
-button {
-    width: 100px;
-    height: 100px;
-    background-size: 100px 100px;
-  }
-  img{
-    height: 200px;
-    width: 200px;
-    
-  }
-  .nameFont{
-    font-size: 40px;
-  
-  }
+
+.lds-roller {
+	display: inline-block;
+	position: relative;
+	width: 64px;
+	height: 64px;
+}
+
+.lds-roller div {
+	animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+	transform-origin: 32px 32px;
+}
+
+.lds-roller div:after {
+	content: " ";
+	display: block;
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: #fff;
+	margin: -3px 0 0 -3px;
+}
+
+.lds-roller div:nth-child(1) {
+	animation-delay: -0.036s;
+}
+
+.lds-roller div:nth-child(1):after {
+	top: 50px;
+	left: 50px;
+}
+
+.lds-roller div:nth-child(2) {
+	animation-delay: -0.072s;
+}
+
+.lds-roller div:nth-child(2):after {
+	top: 54px;
+	left: 45px;
+}
+
+.lds-roller div:nth-child(3) {
+	animation-delay: -0.108s;
+}
+
+.lds-roller div:nth-child(3):after {
+	top: 57px;
+	left: 39px;
+}
+
+.lds-roller div:nth-child(4) {
+	animation-delay: -0.144s;
+}
+
+.lds-roller div:nth-child(4):after {
+	top: 58px;
+	left: 32px;
+}
+
+.lds-roller div:nth-child(5) {
+	animation-delay: -0.18s;
+}
+
+.lds-roller div:nth-child(5):after {
+	top: 57px;
+	left: 25px;
+}
+
+.lds-roller div:nth-child(6) {
+	animation-delay: -0.216s;
+}
+
+.lds-roller div:nth-child(6):after {
+	top: 54px;
+	left: 19px;
+}
+
+.lds-roller div:nth-child(7) {
+	animation-delay: -0.252s;
+}
+
+.lds-roller div:nth-child(7):after {
+	top: 50px;
+	left: 14px;
+}
+
+.lds-roller div:nth-child(8) {
+	animation-delay: -0.288s;
+}
+
+.lds-roller div:nth-child(8):after {
+	top: 45px;
+	left: 10px;
+}
+
+@keyframes lds-roller {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 
+/* Absolute Center Spinner */
 
+.lds-roller {
+	position: fixed;
+	z-index: 1051;
+	height: 2em;
+	width: 2em;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+
+/* Transparent Overlay */
+
+.lds-roller:before {
+	content: '';
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.lds-roller {
+	display: none;
+}

@@ -1,10 +1,10 @@
-
+let timer;
+let ssPlaying;
 
 function reqListener() {
 	let data = JSON.parse(this.responseText);
 	let ul = document.getElementById('yogaUl');
 	let tracker = [];
-	// for (let i = 0; i < data.items.length; i++){
 	let length = data.items.length < 5 ? data.items.length - 1 : 4;
 	for (let i = 0; i <= length; i++) {
 		let randomPose = getRandomPose(data.items);
@@ -14,54 +14,20 @@ function reqListener() {
 				i--;
 			}
 		}
-		// while (!tracker.find(p => p.id == randomPose.id)){
-		// randomPose = getRandomPose(data.items);
-		//   if (!tracker.find(p => p.id == randomPose.id)){
-		//   tracker.push(randomPose);
-		//   }
-
-		// }
-
-		// var chosen = [];
-
-		// for (var i = 0; i<=4; i++) {
-		// var randy = Math.floor(Math.random() * len);
-		// chosen[i] = myArray[randy];
-		// for (k=0; k<=i-1; k++) {
-		// if (chosen[k] == chosen[i]) {
-		// i--;  // duplicate found so decrement i
-		// }
-		// }
-		// }
-		// if (data.items.length >= 5){
-		// do {
-
-		// }
-		// while (!tracker.find(p => p.id == randomPose.id))
-		// }else{
-		// randomPose = data.items[i];
-
-		// }
-
-		// let li = document.createElement('li');
-		// let name = `${randomPose.sanskrit_name} - ${randomPose.english_name}`;
-		// let imgUrl = randomPose.img_url;
-		// let template = `<li><div>${name}</div><img src="${imgUrl}"/></li>`;
-		// ul.insertAdjacentHTML('beforeend', template);
 	}
 
-	// we were running this code whether the pose was duplicated or not.
-	// we just need to seperate it out from the loop
+
 	tracker.forEach(pose => {
 		let name = `${pose.sanskrit_name} - ${pose.english_name}`;
 		let imgUrl = pose.img_url;
-		let template = `<li class="ssImg"><div><div class="nameFont">${name}</div><img id="image" src="${imgUrl}" alt="${name}" /></div></div></li>`;
+		let template = `<li class="ssImg"><div><div class="nameFont">${name}</div><img id="image" src="${imgUrl}" alt="${name}"/></div></div></li>`;
 
 		ul.insertAdjacentHTML('beforeend', template)
 	});
+	$('.lds-roller').hide();
 }
 
-
+//function getYogaPoses makes call to api
 function getYogaPoses(yogaType) {
 	var oReq = new XMLHttpRequest();
 	oReq.addEventListener('load', reqListener);
@@ -73,89 +39,133 @@ function getYogaPoses(yogaType) {
 	oReq.send();
 }
 
-
-
-
+//function getRandomPose gets random number returns random array of poses
 function getRandomPose(posesArr) {
 	var num = Math.floor(Math.random() * posesArr.length);
 	return posesArr[num];
 }
-
-
 
 //to create slideshow
 let slideShowPoses = [];
 let img_Index = 0;
 
 function showSlides() {
+	$('#startBtnContainer').hide();
 	let imgLI = document.getElementsByClassName("ssImg");
+
 	for (i = 0; i < imgLI.length; i++) {
 		imgLI[i].style.display = "none";
 	}
 	img_Index++;
-
 	if (img_Index > imgLI.length) {
-		renderLast()
-	} else {
-		imgLI[img_Index - 1].style.display = "block";
-		setTimeout(showSlides, 30000)
-		
+		img_Index = 1
 	}
-}//end of function showSlides
+	imgLI[img_Index - 1].style.display = "block";
+	ssPlaying = setTimeout(showSlides, timer * 1000);
+}
 
-
+//when id namaste button is clicked renderChooseCategories is called
 function handleStartClicked() {
 	$('#namaste').click(() => {
 		renderChooseCategories();
 	});
 }
 
+
 function renderChooseCategories() {
-
+	if (ssPlaying) {
+		clearInterval(ssPlaying);
+	}
 	let template = `<h2>What are you in the mood for?</h2>
-      <p>Select the yoga types you would like to practice and hit the OM bottom below</p>
-   <div id="yoga-info">
-    <select id="yogatypes" multiple size=12>
-  <option label="Core Yoga Poses">Core Yoga Poses</option>
-    <option label="Seated Yoga Poses">Seated Yoga Poses</option>
-    <option label="Strengthening">Strengthening</option>
-     <option label="Chest Opening">Chest Opening</option>
-    <option label="Yoga Backbends">Yoga Backbends</option>
-    <option label="Forward Bend Yoga Poses">Forward Bend Yoga Poses</option>
-     <option label="Hip Opening Yoga Poses">Hip Opening Yoga Poses</option>
-    <option label="Standing Yoga Poses">Standing Yoga Poses</option>
-     <option label="Restorative Yoga Poses">Restorative Yoga Poses</option>
-    <option label="Arm Balance Yoga Poses">Arm Balance Yoga Poses</option>
-     <option label="Balancing Yoga Poses">Balancing Yoga Poses</option>
-    <option label="Inversion Yoga Poses">Inversion Yoga Poses</option>
-</select>
-<button id="btnOM" class="hideText">OM</button>
+    <form>
+        <p>Select at least 1 yoga type you would like to practice</p>
+        <fieldset>
+            <div id="yoga-info">
+                <label for="yogatypes">Yoga Types</label>
+                <select required id="yogatypes" multiple size="12">
+                    <option label="Core Yoga Poses">Core Yoga Poses</option>
+                    <option label="Seated Yoga Poses">Seated Yoga Poses</option>
+                    <option label="Strengthening">Strengthening</option>
+                    <option label="Chest Opening">Chest Opening</option>
+                    <option label="Yoga Backbends">Yoga Backbends</option>
+                    <option label="Forward Bend Yoga Poses">Forward Bend Yoga Poses</option>
+                    <option label="Hip Opening Yoga Poses">Hip Opening Yoga Poses</option>
+                    <option label="Standing Yoga Poses">Standing Yoga Poses</option>
+                    <option label="Restorative Yoga Poses">Restorative Yoga Poses</option>
+                    <option label="Arm Balance Yoga Poses">Arm Balance Yoga Poses</option>
+                    <option label="Balancing Yoga Poses">Balancing Yoga Poses</option>
+                    <option label="Inversion Yoga Poses">Inversion Yoga Poses</option>
+                </select>
+            </div>
+            <div>
+                <p> Please select how long you'd like each pose to display...</p>
+                <label for="poseTimer">Sequence Timer</label>
+                <select required id="poseTimer">
+                        <option value="30">30 seconds</option>
+                        <option value="40">40 seconds</option>
+                        <option value="50">50 seconds</option>
+                        <option value="60">60 seconds</option>
+                        <option value="70">70 seconds</option>
+                        <option value="80">80 seconds</option>
+                        <option value="90">90 seconds</option>
+                        <option value="custom">Customize</option>
+                </select>
+            </div>    
+            <div> 
+                <label for="customizeTimer" id="customizeTimerLabel">Enter time in seconds</label>
+                <input type="number" min="1" id="customizeTimer" hidden/>            
+            </div>
+        </fieldset>
+        <p>Click the OM button to create a new sequence </p>
+        <button id="btnOM">OM</button>
+    </form>`;
 
- </div>
-
-`
 	$('.container').html(template);
-	let btnOM = document.getElementById('btnOM');
-	btnOM.addEventListener('click', function () {
+	$('#customizeTimerLabel').hide();
+
+	//roller while loading
+	$("form").submit(function (e) {
+		e.preventDefault();
+		$('.lds-roller').show();
 		let yogaType = $('#yogatypes').val();
-		console.log(yogaType);
+		if ($('#poseTimer').val() === 'custom') {
+			timer = Number($('#customizeTimer').val());
+		} else {
+			timer = Number($('#poseTimer').val());
+		}
 		renderImgSS();
-		yogaType.forEach(function(type){
-	
+		yogaType.forEach(function (type) {
+
 			getYogaPoses(type);
 		});
 	});
 
+	//show customize timer if user selects customize value
+	$('#poseTimer').change(function (e) {
+		let value = e.currentTarget.value;
+		if (value === 'custom') {
+			$('#customizeTimer').attr('hidden', false);
+			$('#customizeTimerLabel').show();
+		} else {
+			$('#customizeTimer').attr('hidden', true);
+			$('#customizeTimerLabel').hide();
+			$('#customizeTimer').val('');
+		}
 
+	})
 
-}//end of renderChooseCategories
+} //end of renderChooseCategories
 
+//user decides to either use the suggested sequence or create a new one by clicking btnRestart
 function renderImgSS() {
-	let template = `<p>Each pose will display for 30 seconds, if you want to keep going the sequence will restart automatically until you hit the OM button again</p>
+	const secondsText = Number(timer) === 1 ? 'second' : 'seconds';
+
+	let template = `<p>Each pose will display for ${timer} second, if you want to keep going the sequence will restart automatically until you hit the home button</p>
 <ul id="yogaUl">
 </ul>
-<div><p>Hit the OM buttom to start</p><button id="btnSequence" class="hideText">Start</button></div>
-<div id="noLike"><p>Not feeling it? Go back to try again</p><button id="btnRestart" class="hideText">Try again</button></div>`
+<div id="startBtnContainer"><p>Hit the OM buttom to start</p><button id="btnSequence">Start</button></div>
+<div id="noLike"><p>Not feeling it? Go back to try a new sequence</p><button id="btnRestart">Try again</button></div>`
+
 	$('.container').html(template);
 	//add event listener to button start sequence
 	let btnSequence = document.getElementById("btnSequence");
@@ -166,19 +176,44 @@ function renderImgSS() {
 
 }
 
-function renderLast() {
-	let template = `<p>Congrats! You finished your yoga sequence!</p>
-
-	<button id="newSS" class="hideText">Return to Choose</button>`
+//takes user to about screen
+$('#js-about').click(event => {
+	event.preventDefault();
+	if (ssPlaying) {
+		clearInterval(ssPlaying);
+	}
+	let template = `<p>Thank you for using my app.  My intention was to build an app that allows you to come up with your own yoga sequences based on the type of yoga you want to practice any given day..Enjoy!!</p> 
+     
+     
+     
+     <h3>NAMASTE!!</h3>`
 	$('.container').html(template);
-	//add event listener to button start sequence
-	let newSS = document.getElementById("newSS");
-	newSS.addEventListener("click", renderChooseCategories);
+});
 
-}
+//Takes the user back to the homepage when the "Back to Homepage" button is selected
+$('#js-relaunch').click(event => {
+	event.preventDefault();
+	if (ssPlaying) {
+		clearInterval(ssPlaying);
+	}
+	let template = `
+		<h2>Create your own Yoga sequence!!</h2>
+		</form>
+	 <p>Do you ever want to do yoga but don't know what poses to include in your practice?  Well this app helps you create a random yoga sequence</p>
+   <button type="button" id="namaste" class="hideText">Start</button>`;
+
+	$('.container').html(template);
+});
+
 function runYogaSequence() {
 	handleStartClicked();
-
+	$(runYogaSequence);
 }
 
+
 $(runYogaSequence);
+
+
+//alt+shift+F - to format code on mac
+//add, commit, push 
+//run axe

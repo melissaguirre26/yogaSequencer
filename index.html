@@ -1,38 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-     <meta name="author" content="Melissa Aguirre">
-     <meta name="description" content="A yoga application for users to create yoga sequences based on yogatype selected">
-    <meta name="keywords" content="API Capstone, Thinkful">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yoga Sequencer App</title>
-    <link href="index.css" rel="stylesheet" type="text/css" />
-    <link href="responsive.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Gaegu:400,700" rel="stylesheet">
-  </head>
-  <body>
-      <ul id="nav">
-          <li><a href="default.asp">Home</a></li>
-          <li><a href="about.asp">About</a></li>
-        </ul>
-    <header class="box" role="banner">
-      <h1>Yoga Sequencer</h1>
-   </header>  
-   <main class="box" role="main">
-  
-      
-   <div class="container">
-      <form>
-          <h2>Create your own Yoga sequence!!</h2>
-          </form>
-       <p>Do you ever want to do yoga but don't know what poses to include in your practice?  Well this app helps you create a random yoga sequence</p>
-     <button type="button" id="namaste" class="hideText">Start</button>
-     </div>
-     </main>
- <!-- close container div -->
-     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="index.js"></script>
-  </body>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="author" content="Melissa Aguirre">
+      <meta name="description" content="A yoga application for users to create yoga sequences based on yogatype selected">
+      <meta name="keywords" content="API Capstone, Thinkful">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Yoga Sequencer App</title>
+      <link rel="icon" type="image/png" href="favicon.ico">
+      <link href="index.css" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/css?family=Gaegu:400,700" rel="stylesheet">
+   </head>
+   <body>
+      <div id="navigation-container" class="box">
+         <a id="js-relaunch" href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdhOqBg6AIyl76t9fBJhbWNKczovlhx6sQdrWbmbXORXdgyq5H" class="nav-img"></a>
+         <ul id="nav" "role="navigation">
+            <li><a id="js-relaunch" href="#">Home</a></li>
+            <li><a id="js-about" href="#">About</a></li>
+      </div>
+      </ul>
+      <header class="box" role="banner">
+         <h1>Yoga Sequencer</h1>
+      </header>
+      <main class="box" role="main">
+      <div class="container" aria-live="assertive">
+         <form>
+            <h2>Create your own Yoga sequence!!</h2>
+         </form>
+         <p>Do you ever want to do yoga but don't know what poses to include in your practice?  Well this app helps you create a random yoga sequence</p>
+         <button type="button" id="namaste">Start</button>
+      </div>
+      <div class="lds-roller">
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+      </div>
+      <!-- close container div -->
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src="index.js"></script>
+   </body>
 </html>
