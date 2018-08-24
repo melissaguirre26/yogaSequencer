@@ -83,18 +83,18 @@ function renderChooseCategories() {
             <div id="yoga-info">
                 <label for="yogatypes">Yoga Types</label>
                 <select required id="yogatypes" multiple size="12">
-                    <option label="Core Yoga Poses">Core Yoga Poses</option>
-                    <option label="Seated Yoga Poses">Seated Yoga Poses</option>
-                    <option label="Strengthening">Strengthening</option>
-                    <option label="Chest Opening">Chest Opening</option>
-                    <option label="Yoga Backbends">Yoga Backbends</option>
-                    <option label="Forward Bend Yoga Poses">Forward Bend Yoga Poses</option>
-                    <option label="Hip Opening Yoga Poses">Hip Opening Yoga Poses</option>
-                    <option label="Standing Yoga Poses">Standing Yoga Poses</option>
-                    <option label="Restorative Yoga Poses">Restorative Yoga Poses</option>
-                    <option label="Arm Balance Yoga Poses">Arm Balance Yoga Poses</option>
-                    <option label="Balancing Yoga Poses">Balancing Yoga Poses</option>
-                    <option label="Inversion Yoga Poses">Inversion Yoga Poses</option>
+                    <option value="Core Yoga Poses">Core Yoga Poses</option>
+                    <option value="Seated Yoga Poses">Seated Yoga Poses</option>
+                    <option value="Strengthening Poses">Strengthening Poses</option>
+                    <option value="Chest Opening Poses">Chest Opening Poses</option>
+                    <option value="Yoga Backbend Poses">Yoga Backbend Poses</option>
+                    <option value="Forward Bend Yoga Poses">Forward Bend Yoga Poses</option>
+                    <option value="Hip Opening Yoga Poses">Hip Opening Yoga Poses</option>
+                    <option value="Standing Yoga Poses">Standing Yoga Poses</option>
+                    <option value="Restorative Yoga Poses">Restorative Yoga Poses</option>
+                    <option value="Arm Balance Yoga Poses">Arm Balance Yoga Poses</option>
+                    <option value="Balancing Yoga Poses">Balancing Yoga Poses</option>
+                    <option value="Inversion Yoga Poses">Inversion Yoga Poses</option>
                 </select>
             </div>
             <div>
@@ -160,11 +160,11 @@ function renderChooseCategories() {
 function renderImgSS() {
 	const secondsText = Number(timer) === 1 ? 'second' : 'seconds';
 
-	let template = `<p>Each pose will display for ${timer} second, if you want to keep going the sequence will restart automatically until you hit the home button</p>
+	let template = `<p>Each pose will display for ${timer} ${secondsText}. If you want to keep going, the sequence will restart automatically until you hit the home button.</p>
 <ul id="yogaUl">
 </ul>
 <div id="startBtnContainer"><p>Hit the OM buttom to start</p><button id="btnSequence">Start</button></div>
-<div id="noLike"><p>Not feeling it? Go back to try a new sequence</p><button id="btnRestart">Try again</button></div>`
+<div id="noLike"><p>Not feeling it? Go back to try a new sequence.</p><button id="btnRestart">Try again</button></div>`
 
 	$('.container').html(template);
 	//add event listener to button start sequence
@@ -182,7 +182,7 @@ $('#js-about').click(event => {
 	if (ssPlaying) {
 		clearInterval(ssPlaying);
 	}
-	let template = `<p>Thank you for using my app.  My intention was to build an app that allows you to come up with your own yoga sequences based on the type of yoga you want to practice any given day..Enjoy!!</p> 
+	let template = `<p>Thank you for using my app. My intention was to build an app that allows you to come up with your own yoga sequences based on the type of yoga you want to practice any given day. Enjoy!!</p> 
      
      
      
