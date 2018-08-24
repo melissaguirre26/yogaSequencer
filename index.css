@@ -37,6 +37,7 @@ main {
 	padding: 0;
 	overflow: hidden;
 	background-color: rgb(132, 216, 194);
+  display: inline;
 }
 
 #nav li {
@@ -151,6 +152,14 @@ label {
 	display: block;
 }
 
+.hideText{
+  text-indent: -9999px;
+  text-align: left;
+  white-space: nowrap; 
+  overflow: hidden; 
+}
+
+}
 @media only screen and (min-width: 600px) {
 	body {
 		background-color: rgb(132, 216, 194);
@@ -211,6 +220,13 @@ label {
 	li a {
 		font-size: 25px;
 	}
+
+  .hideText{
+  text-indent: -9999px;
+  text-align: left;
+  white-space: nowrap; 
+  overflow: hidden; 
+}
 	/* loader styling */
 }
 
