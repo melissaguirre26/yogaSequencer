@@ -153,10 +153,7 @@ label {
 }
 
 .hideText{
-  text-indent: -9999px;
-  text-align: left;
-  white-space: nowrap; 
-  overflow: hidden; 
+ display:none; 
 }
 
 }
