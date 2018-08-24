@@ -73,9 +73,6 @@ function handleStartClicked() {
 
 
 function renderChooseCategories() {
-	if (ssPlaying) {
-		clearInterval(ssPlaying);
-	}
 	let template = `<h2>What are you in the mood for?</h2>
     <form>
         <p>Select at least 1 yoga type you would like to practice</p>
@@ -120,7 +117,7 @@ function renderChooseCategories() {
         <button id="btnOM">OM</button>
     </form>`;
 
-	$('.container').html(template);
+	loadTemplate(template);
 	$('#customizeTimerLabel').hide();
 
 	//roller while loading
@@ -160,11 +157,11 @@ function renderChooseCategories() {
 function renderImgSS() {
 	const secondsText = Number(timer) === 1 ? 'second' : 'seconds';
 
-	let template = `<p>Each pose will display for ${timer} ${secondsText}. If you want to keep going, the sequence will restart automatically until you hit the home button.</p>
+	let template = `<p>Each pose will display for ${timer} ${secondsText}. If you want to keep going, the sequence will restart automatically until you hit the home link.</p>
 <ul id="yogaUl">
 </ul>
-<div id="startBtnContainer"><p>Hit the OM buttom to start</p><button id="btnSequence">Start</button></div>
-<div id="noLike"><p>Not feeling it? Go back to try a new sequence.</p><button id="btnRestart">Try again</button></div>`
+<div id="startBtnContainer"><p>Hit the OM button to start</p><button id="btnSequence">OM</button></div>
+<div id="noLike"><p>Not feeling it? Click button below to try a new sequence.</p><button id="btnRestart">Try again</button></div>`
 
 	$('.container').html(template);
 	//add event listener to button start sequence
@@ -176,33 +173,31 @@ function renderImgSS() {
 
 }
 
+function loadTemplate(template) {
+    if (ssPlaying) {
+		clearInterval(ssPlaying);
+	}	
+	$('.container').html(template);
+}
+
 //takes user to about screen
 $('#js-about').click(event => {
 	event.preventDefault();
-	if (ssPlaying) {
-		clearInterval(ssPlaying);
-	}
 	let template = `<p>Thank you for using my app. My intention was to build an app that allows you to come up with your own yoga sequences based on the type of yoga you want to practice any given day. Enjoy!!</p> 
-     
-     
-     
      <h3>NAMASTE!!</h3>`
-	$('.container').html(template);
+	 loadTemplate(template);
 });
 
 //Takes the user back to the homepage when the "Back to Homepage" button is selected
-$('#js-relaunch').click(event => {
+$('.js-relaunch').click(event => {
 	event.preventDefault();
-	if (ssPlaying) {
-		clearInterval(ssPlaying);
-	}
 	let template = `
 		<h2>Create your own Yoga sequence!!</h2>
 		</form>
 	 <p>Do you ever want to do yoga but don't know what poses to include in your practice?  Well this app helps you create a random yoga sequence</p>
    <button type="button" id="namaste" class="hideText">Start</button>`;
 
-	$('.container').html(template);
+	loadTemplate(template);
 });
 
 function runYogaSequence() {
