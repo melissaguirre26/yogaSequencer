@@ -152,8 +152,11 @@ label {
 	display: block;
 }
 
-.hideText{
- display:none; 
+.hideText {
+  text-indent: -9999px;
+  text-align: left;
+  white-space: nowrap; 
+  overflow: hidden; 
 }
 
 }
@@ -218,7 +221,7 @@ label {
 		font-size: 25px;
 	}
 
-  .hideText{
+ .hideText {
   text-indent: -9999px;
   text-align: left;
   white-space: nowrap; 
