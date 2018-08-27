@@ -48,7 +48,7 @@ li a {
 	display: block;
 	color: #6A1D57;
 	text-align: center;
-	padding: 20px 20px;
+	padding: 20px 26px;
 	text-decoration: none;
 	font-size: 15px;
 }
@@ -158,6 +158,9 @@ label {
   left: -999em;
 }
 
+#yogaUl {
+	padding: 0px;
+}
 
 @media only screen and (min-width: 600px) {
 	body {
