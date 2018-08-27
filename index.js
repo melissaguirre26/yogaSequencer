@@ -195,7 +195,7 @@ $('.js-relaunch').click(event => {
 		<h2>Create your own Yoga sequence!!</h2>
 		</form>
 	 <p>Do you ever want to do yoga but don't know what poses to include in your practice?  Well this app helps you create a random yoga sequence</p>
-   <button type="button" id="namaste" class="hideText">Start</button>`;
+   <button type="button" id="namaste">Start</button>`;
 
 	loadTemplate(template);
 });
