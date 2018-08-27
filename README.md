@@ -17,3 +17,5 @@ The user can click on the home link and app logo to go to the home(main) screen.
 
 
 https://melissaguirre26.github.io/yogaSequencer/
+
+![choose yoga types](https://github.com/melissaguirre26/yogaSequencer/blob/master/images/ChooseYogaTypes.JPG)
