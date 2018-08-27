@@ -82,9 +82,9 @@ function renderChooseCategories() {
                 <select required id="yogatypes" multiple size="12">
                     <option value="Core Yoga Poses">Core Yoga Poses</option>
                     <option value="Seated Yoga Poses">Seated Yoga Poses</option>
-                    <option value="Strengthening Poses">Strengthening Yoga Poses</option>
-                    <option value="Chest Opening Poses">Chest Opening Yoga Poses</option>
-                    <option value="Yoga Backbend Poses">Backbend Yoga Poses</option>
+                    <option value="Strengthening Yoga Poses">Strengthening Yoga Poses</option>
+                    <option value="Chest Opening Yoga Poses">Chest Opening Yoga Poses</option>
+                    <option value="Yoga Backbends">Backbend Yoga Poses</option>
                     <option value="Forward Bend Yoga Poses">Forward Bend Yoga Poses</option>
                     <option value="Hip Opening Yoga Poses">Hip Opening Yoga Poses</option>
                     <option value="Standing Yoga Poses">Standing Yoga Poses</option>
