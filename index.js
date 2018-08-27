@@ -84,7 +84,7 @@ function renderChooseCategories() {
                     <option value="Seated Yoga Poses">Seated Yoga Poses</option>
                     <option value="Strengthening Yoga Poses">Strengthening Yoga Poses</option>
                     <option value="Chest Opening Yoga Poses">Chest Opening Yoga Poses</option>
-                    <option value="Yoga Backbends">Backbend Yoga Poses</option>
+                    <option value="Backbend Yoga Poses">Backbend Yoga Poses</option>
                     <option value="Forward Bend Yoga Poses">Forward Bend Yoga Poses</option>
                     <option value="Hip Opening Yoga Poses">Hip Opening Yoga Poses</option>
                     <option value="Standing Yoga Poses">Standing Yoga Poses</option>
