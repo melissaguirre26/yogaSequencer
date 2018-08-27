@@ -87,6 +87,7 @@ button {
 	background-position: 0px 0px;
 	background-size: 50px 50px;
 	border-radius: 50%;
+	cursor: pointer;
 }
 
 button:hover {
