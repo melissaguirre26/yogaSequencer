@@ -18,15 +18,27 @@ The user can click on the home link and app logo to go to the home(main) screen.
 
 https://melissaguirre26.github.io/yogaSequencer/
 
+The home screen lets the user know what the app does- user must click start button to continue.
+
 ![choose yoga types](https://github.com/melissaguirre26/yogaSequencer/blob/master/images/HomeScreen.JPG)
+
+User needs to pick at least 1 yogatype he/she would like to practice and select the time in secods for each pose to display 
 
 ![choose yoga types](https://github.com/melissaguirre26/yogaSequencer/blob/master/images/ChooseYogaTypes.JPG)
 
+User can customize timer and type in the time in seconds as seen in the example below ex. Each restorative pose will display for 1 minute.
+
 ![choose yoga types](https://github.com/melissaguirre26/yogaSequencer/blob/master/images/CustomizeTimer.JPG)
+
+The user previews the sequence and decides if he/she wants to go ahead with this sequence (hit OM button) or try a new sequence (hit Try Again)
 
 ![choose yoga types](https://github.com/melissaguirre26/yogaSequencer/blob/master/images/StartSequenceOrTryAgain.JPG)
 
+When the user hits the OM button, the slideshow starts playing until the user clicks the home link.
+
 ![choose yoga types](https://github.com/melissaguirre26/yogaSequencer/blob/master/images/SequenceSlideShow.JPG)
+
+If the user clicks "Try Again" Button - he/she will be prompted to the screen to choose Yoga types and the duration.
 
 ![choose yoga types](https://github.com/melissaguirre26/yogaSequencer/blob/master/images/TryAgain.JPG)
 
